@@ -1,0 +1,20 @@
+section#contact-info{
+  font-size: .8em;
+}
+.job{
+  background-color: #e9e5dc;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.ul {
+  font-size: .8em;
+
+}
+section.job:first-letter{
+  font-size: 200px;
+}
+li.featured{ /* Using css to select child element. */
+  color: red;
+}
