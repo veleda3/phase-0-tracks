@@ -1,0 +1,27 @@
+.octopus-dressed {
+  position: relative;
+}
+
+#Octopus {
+  position: absolute;
+  top:80px;
+  left: 20px;
+  margin:300px; 
+  z-index: -3
+}
+
+#hat {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 300px; 
+  z-index: -2
+}
+
+#glasses {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  margin:300px;
+  z-index: -1
+}
