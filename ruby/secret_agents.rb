@@ -7,19 +7,19 @@ ENCRYPT
 =end
 def encrypt(password)
   index=0
+  new_password = " "
   while index < password.length
     if password[index]==" "
-      print " "
+      p " "
       index+=1
     elsif password[index]=="z"
-      print "a"
+      p "a"
       index+=1
     else
-      print password[index].next
+      p password[index].next
       index+=1
     end
   end
-  puts " "
 end
 
 #puts"What's your password?"
@@ -41,13 +41,13 @@ def decrypt(encrypted_password)
     while d_index < decrypter.length
       if encrypted_password[e_index]==decrypter[d_index]
         if encrypted_password[e_index]==" "
-          print " "
+          p " "
           e_index+=1
         elsif encrypted_password[e_index]=="a"
-          print "z"
+          p "z"
           e_index+=1
         else
-          print decrypter[d_index-1]
+          p decrypter[d_index-1]
         end
       end
       d_index+=1
@@ -60,7 +60,7 @@ end
 #decrypt(gets.chomp)
 
 
-# decrypt(encrypt("swordfish"))
+decrypt(encrypt("swordfish"))
 
 =begin
 -encrypt of decrypt?
@@ -69,12 +69,12 @@ end
 -print results
 =end
 
-puts "Would you like to encrypt or decrypt?"
-user_input=gets.chomp.downcase
-if user_input == "encrypt"
-  puts "What would you like to encrypt?"
-  encrypt(gets.chomp)
-elsif  user_input == "decrypt"
-  puts "What would you like to decrypt?"
-  decrypt(gets.chomp)
-end
+# puts "Would you like to encrypt or decrypt?"
+# user_input=gets.chomp.downcase
+# if user_input == "encrypt"
+#   puts "What would you like to encrypt?"
+#   encrypt(gets.chomp)
+# elsif  user_input == "decrypt"
+#   puts "What would you like to decrypt?"
+#   decrypt(gets.chomp)
+# end
