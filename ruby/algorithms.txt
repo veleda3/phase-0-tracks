@@ -1,0 +1,32 @@
+elevator robot 
+1. make elevator floor numbers equal as building floor size
+2. ask user what floor they want to go inside the elevator
+3. ask users if they're going up or down outside the elevator
+4. tell elevator when to take new input from user
+    take all up commands if elevator is in the bottom floor
+      while elevator going up 
+        do not stop for users going down.
+        go to the next one 
+    
+    take all down commands if elevator is in the top floor
+      while elevator going down
+        do not stop for users going up.
+        go to the next one
+
+  
+5. while elevator going up stop and open door from users
+    if elevator floor number >= elevator floor in action
+      stop and open the door
+    else
+      ignore command until elevator stops in the bottom floor.
+      go to the next one
+6. while elevator going down stop and open door from users
+    if elevator floor number <= elevator floor in action
+      stop and open the door
+    else
+      ignore command until elevator stops in the top  highest floor a user is asking to stop to go down.
+      go to the next one
+
+
+
+
