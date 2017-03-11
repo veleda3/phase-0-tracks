@@ -69,12 +69,12 @@ decrypt(encrypt("swordfish"))
 -print results
 =end
 
-# puts "Would you like to encrypt or decrypt?"
-# user_input=gets.chomp.downcase
-# if user_input == "encrypt"
-#   puts "What would you like to encrypt?"
-#   encrypt(gets.chomp)
-# elsif  user_input == "decrypt"
-#   puts "What would you like to decrypt?"
-#   decrypt(gets.chomp)
-# end
+puts "Would you like to encrypt or decrypt?"
+user_input=gets.chomp.downcase
+if user_input == "encrypt"
+  puts "What would you like to encrypt?"
+  encrypt(gets.chomp)
+elsif  user_input == "decrypt"
+  puts "What would you like to decrypt?"
+  decrypt(gets.chomp)
+end
