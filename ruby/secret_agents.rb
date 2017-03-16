@@ -60,7 +60,7 @@ end
 #decrypt(gets.chomp)
 
 
-decrypt(encrypt("swordfish"))
+# decrypt(encrypt("swordfish"))
 
 =begin
 -encrypt of decrypt?

@@ -8,37 +8,48 @@
 
 personal_info = {
       name: "",
-      age: "",
-      number_of_children: "",
+      age: 0,
+      number_of_children: 0,
       decor_theme: "",
-      favorite_hobby: ""
+      fave_hobby: ""
 
 }
-p "name?"
-user_name = gets.chomp
-p "address?"
-user_age = gets.chomp.to_i
-p "email?"
-user_number_of_children = gets.chomp.to_i
-p "phone number?"
-user_decor_theme = gets.chomp
-p "whats your favorite hobby"
-user_favorite_hobby = gets.chomp
+puts "Name?"
+personal_info[:name] = gets.chomp
+puts "Age?"
+personal_info[:age] = gets.chomp.to_i
+puts "number of children in the home?"
+personal_info[:number_of_children] = gets.chomp.to_i
+puts "What dector theme you like?"
+personal_info[:decor_theme] = gets.chomp
+puts "whats your favorite hobby"
+personal_info[:fave_hobby] = gets.chomp
 
-personal_info[:name] = user_name
-personal_info[:address] = user_age
-personal_info[:email] = user_number_of_children
-personal_info[:phone] = user_decor_theme
-personal_info[:fave_shade_of_blue] = user_favorite_hobby
 
-p "Wallpaper preferences (type any that apply):"
-wallpaper = ["Paisley", "Chevrons", "Photorealistic woodsy scenes (with or without squirrels)", "Abstract woodsy scenes (no squirrels)"]
-puts wallpaper
-wallpaper_input = gets.chomp
+p "Kitchen decor themes options, if you prefer a different theme please type it down (press enter when done):"
+wallpapers = ["Minimalist", "Victorian kitchen ", "Warm Tuscan Theme Kitchen", "Rustic kitchen tables"]
+puts "Your wallpaper options are:"
+  wallpapers.each do |wallpaper|
+    puts wallpapers
+  end
+inputs = []
+collect_input = true
+
+while collect_input
+    item = gets.chomp 
+    inputs << item 
+     if item == ""
+      collect_input = false
+     end
+end
+# p inputs
 
 p "Ombre is:"
 ombre = ["Fierce", "So last season", "Practically medieval in its appalling irrelevance"]
 puts ombre
 ombre_input = gets.chomp
 
-p personal_info
+
+
+
+# p personal_info
