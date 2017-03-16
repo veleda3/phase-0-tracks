@@ -20,8 +20,6 @@ puts "Age?"
 personal_info[:age] = gets.chomp.to_i
 puts "number of children in the home?"
 personal_info[:number_of_children] = gets.chomp.to_i
-puts "What dector theme you like?"
-personal_info[:decor_theme] = gets.chomp
 puts "whats your favorite hobby"
 personal_info[:fave_hobby] = gets.chomp
 
@@ -30,7 +28,7 @@ p "Kitchen decor themes options, if you prefer a different theme please type it 
 wallpapers = ["Minimalist", "Victorian kitchen ", "Warm Tuscan Theme Kitchen", "Rustic kitchen tables"]
 puts "Your wallpaper options are:"
   wallpapers.each do |wallpaper|
-    puts wallpapers
+    puts wallpaper
   end
 inputs = []
 collect_input = true
@@ -42,14 +40,16 @@ while collect_input
       collect_input = false
      end
 end
-# p inputs
+puts "if you like to make any changes to your favorite hobby, please type yes or no?"
+type_to_change = gets.chomp
 
-p "Ombre is:"
-ombre = ["Fierce", "So last season", "Practically medieval in its appalling irrelevance"]
-puts ombre
-ombre_input = gets.chomp
+unless type_to_change == 'no' 
+  puts "ok, let's change your favorite hobby"
+  puts "Your current favorite hobby is #{personal_info[:fave_hobby]} please type the change here bellow"
+  personal_info[:fave_hobby] = gets.chomp
+end
+p personal_info
 
 
 
 
-# p personal_info
