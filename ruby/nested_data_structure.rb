@@ -8,8 +8,8 @@ ufc_featherweight = {
         ],
         figters_profile: { 
             name: 'Jose Aldo', 
-            record: '26-2-0' 
-        } 
+            record: '26-2-0'         } 
+
     },
     contender_1: {
         stand_up_game: [
