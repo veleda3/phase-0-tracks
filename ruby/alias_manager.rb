@@ -12,12 +12,12 @@ def take_word(word)
   vowels_array = ["a", "e", "i", "o", "u"]
   word = word.downcase.chars
   new_word = word.map! do |letter|
-    if letter == "b"
-      "z"
+    if letter == "z"
+      "b"
     elsif letter == " "
       " "
-    elsif letter == "a"
-      "u"
+    elsif letter == "u"
+      "a"
     elsif vowels_array.include?(letter)
       vowels_array.rotate[vowels_array.index(letter)]
     elsif consonants_array.include?(letter)
@@ -36,7 +36,7 @@ end
 
   def nick_name_translator(word)
   letters = []
-  consonants_array = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z", " "]
+  consonants_amiguelrray = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z", " "]
   vowels_array = ["a", "e", "i", "o", "u"]
   word = word.downcase.chars
   new_word = word.map! do |letter|
@@ -81,6 +81,4 @@ p name_array
 # name_nick_hash = name_array.zip (nick_name).to_h
 name_nick_hash = Hash[name_array.zip(nick_name)]
 p name_nick_hash
-
-
 
