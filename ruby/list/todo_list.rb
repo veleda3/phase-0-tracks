@@ -3,8 +3,6 @@ attr_accessor :get_item_list
 
   def initialize(get_item_list)
     @get_item_list = get_item_list
-    @item_2 = ""
-    @item_delete = ""
 
   end 
   def get_items
@@ -20,7 +18,7 @@ attr_accessor :get_item_list
   end
 
   def get_item(index_of_list)
-    @get_item_list.fetch(index_of_list)
+   @get_item_list.fetch(index_of_list)
 
   end
 
