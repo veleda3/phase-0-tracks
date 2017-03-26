@@ -4,17 +4,17 @@
 #   that we want to be visible through out the class
 
   
-#   create a method that will ask the user to input a word
+#   create a method that will check for a letter in a word
 #     method will break that word into an array for easy iteration.
+#     method will search to see if the array includes a word the user is given back
 
 
 
-#   create a method that will match the index of a word with the guess word
-#     if the outcome is true return the letter to get another try
-#       if outcome is wrong tell the user he only have the same amount of chances of the word's length 
+#   create a method that will take the letter of the word and will guess the count
+#     guess the count against the length of the user word input 
+#     let the user know how many guesses they have left 
 
-#   create a method that a provider letter the user's input letter matches the word from the word array. return that letter back in 
-#   in the same index that the letter was.
+
 
 # driver code
 
@@ -36,7 +36,7 @@ class WordGame
   def initialize(word)
     @new_word = word.chars
     @old_guesses = []
-    @num_of_guesses = @new_word.length * 2
+    @num_of_guesses = @new_word.length 
     @placeholder = ("_" * (new_word.length.to_i)).chars
     @game_over = false
     @guess_counter = 0
@@ -64,20 +64,27 @@ class WordGame
 
 end
 
-# puts "please type the word you want your friend to guess"
-# new_game = WordGame.new(gets.chomp)
-# until new_game.game_over
-#   puts "guess a letter"
-#  letter = gets.chomp
-#  new_game.check_the_letter(letter)
-#  new_game.old_guesses << letter
-#  if new_game.guess_counter == new_game.num_of_guesses
-#     puts "try again!"
+puts "please type the word you want your friend to guess"
+new_game = WordGame.new(gets.chomp)
+until new_game.game_over
+  puts "guess a letter"
+ letter = gets.chomp
+ new_game.check_the_letter(letter)
+ new_game.old_guesses << letter
+ if new_game.guess_counter == new_game.num_of_guesses
+    puts "try again!"
 
-#  if new_game.game_over = true
-#     new_game.placeholder == new_game.new_word
-#     puts "you got it!"
-#     new_game.game_over = true
-#   end
-#   end
-# end
+ if new_game.game_over = true
+    new_game.placeholder == new_game.new_word
+    puts "
+
+you got it!
+   (@)
+  ^\\|
+    |/^
+____|_____
+WIN"
+    new_game.game_over = true
+  end
+  end
+end
