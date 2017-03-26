@@ -54,29 +54,30 @@ class WordGame
   def guess_count(letter)
     @guess_counter += 1 
       if @old_guesses.include?(letter)
-        current_guess = 1 + (@num_of_guesses - @guess_counter)
+        1 + (@num_of_guesses - @guess_counter)
       else
-        current_guess = @num_of_guesses - @guess_counter
-          print "You have #{@current_guess} guesses left."
+         print "You have #{@num_of_guesses - @guess_counter} guesses left."
+         @num_of_guesses - @guess_counter
       end
   
   end
 
 end
 
-new_game = WordGame.new("unicorn")
-until new_game.game_over
-  puts "guess a letter"
- letter = gets.chomp
- new_game.check_the_letter(letter)
- new_game.old_guesses << letter
- if new_game.guess_counter == new_game.num_of_guesses
-    puts "try again!"
+# puts "please type the word you want your friend to guess"
+# new_game = WordGame.new(gets.chomp)
+# until new_game.game_over
+#   puts "guess a letter"
+#  letter = gets.chomp
+#  new_game.check_the_letter(letter)
+#  new_game.old_guesses << letter
+#  if new_game.guess_counter == new_game.num_of_guesses
+#     puts "try again!"
 
- if new_game.game_over = true
-    new_game.placeholder == new_game.new_word
-    puts "you got it!"
-    new_game.game_over = true
-  end
-  end
-end
+#  if new_game.game_over = true
+#     new_game.placeholder == new_game.new_word
+#     puts "you got it!"
+#     new_game.game_over = true
+#   end
+#   end
+# end
