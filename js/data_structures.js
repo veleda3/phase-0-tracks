@@ -13,3 +13,30 @@ var horse = {};
     horse[horses[i]] = colors[i];
   }
   console.log(horse);
+
+// release 2 for challenge 7.2
+
+function Car(brand, capacity, color) {
+
+  console.log(":", this);
+  
+
+  this.brand = brand;
+  this.capacity = capacity;
+  this.color = color;
+  
+  this.bark = function() { console.log("Woof!"); };
+  this.efficiency = function() {
+    if (this.capacity >= 6) {
+      console.log("This car has bad fuel efficiency");
+
+    } else {
+      console.log("This car has good fuel efficiency");
+    } 
+  }
+  
+  console.log("CAR INITIALIZATION COMPLETE");
+};
+
+var car_1 = new Car("Toyota", 6, "red");
+console.log(car_1.efficiency());  
