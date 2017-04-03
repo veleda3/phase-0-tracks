@@ -25,7 +25,7 @@ function Car(brand, capacity, color) {
   this.capacity = capacity;
   this.color = color;
   
-  this.bark = function() { console.log("Woof!"); };
+
   this.efficiency = function() {
     if (this.capacity >= 6) {
       console.log("This car has bad fuel efficiency");
