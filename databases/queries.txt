@@ -1,0 +1,64 @@
+Queries for 8.3 challenge
+
+
+Display the information in one table (either table is fine)
+
+SELECT * FROM fights;
+1|Charles Oliveira|210|Over|2.5|-130
+2|Will Brooks|-250|Under|2.5|100
+3|Thiago Alves|130|Over|2.5|-200
+4|Patrick Cote|-150|Under|2.5|160
+5|Pearl Gonzalez|220|over|2.5|-200
+6|Cynthia Calvillo|-260|Under|2.5|160
+7|Gerard Mousasi|-110|Over|2.5|-185
+8|Chris Weidman|-110|Under|2.5|155
+9|Anthony Johnson|-120|Over|1.5|-160
+10|Daniel Cormier|100|Under|1.5|130
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+UPDATE fights SET OverUnder=Over WHERE id=5;
+1|Charles Oliveira|210|Over|2.5|-130
+2|Will Brooks|-250|Under|2.5|100
+3|Thiago Alves|130|Over|2.5|-200
+4|Patrick Cote|-150|Under|2.5|160
+5|Pearl Gonzalez|220|Over|2.5|-200
+6|Cynthia Calvillo|-260|Under|2.5|160
+7|Gerard Mousasi|-110|Over|2.5|-185
+8|Chris Weidman|-110|Under|2.5|155
+9|Anthony Johnson|-120|Over|1.5|-160
+10|Daniel Cormier|100|Under|1.5|130
+
+Display the information in both tables using one query.
+SELECT * FROM fights, picks WHERE fights.FighName = picks.FighName;
+2|Will Brooks|-250|Under|2.5|100|1|Will Brooks|-250|100|Under|2.5|100|100
+4|Patrick Cote|-150|Under|2.5|160|2|Patrick Cote|-150|100|Under|2.5|160|100
+5|Pearl Gonzalez|220|Over|2.5|-200|3|Pearl Gonzalez|220|100|Under|2.5|-200|100
+7|Gerard Mousasi|-110|Over|2.5|-185|4|Gerard Mousasi|-110|100|Over|2.5|-185|100
+10|Daniel Cormier|100|Under|1.5|130|5|Daniel Cormier|100|200|Under|1.5|130|100
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+SELECT fights.FighName, picks.BetAmount FROM fights JOIN picks ON fights.FighName = picks.FighName;
+Will Brooks|100
+Patrick Cote|100
+Pearl Gonzalez|100
+Gerard Mousasi|100
+Daniel Cormier|200
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM picks WHERE ID = 1;
+SELECT fights.FighName, picks.BetAmount FROM fights JOIN picks ON fights.FighName = picks.FighName;
+Patrick Cote|100
+Pearl Gonzalez|100
+Gerard Mousasi|100
+Daniel Cormier|200
+
+Try a few different joins in your database, and record the commands and the output in queries.txt.
+SELECT fights.FighName, picks.FighName FROM fights INNER JOIN picks ON fights.FighName = picks.FighName;
+Patrick Cote|Patrick Cote
+Pearl Gonzalez|Pearl Gonzalez
+Gerard Mousasi|Gerard Mousasi
+Daniel Cormier|Daniel Cormier
+
+
+
+ 
