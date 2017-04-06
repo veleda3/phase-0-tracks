@@ -1,0 +1,17 @@
+
+
+SELECT Users.F_name, Users.L_name, reviews.stars, reviews.comment, Businesses.name FROM Users JOIN reviews ON reviews.user_id = Users.id JOIN Businesses ON Businesses.id = reviews.business_id;
+
+Bradford|Pitt|3|ok place|Grundy Hollow Wedding Chapel
+Bradford|Pitt|4|better place|Amir's Towing
+Mandy|Kaling|5|best place|Grundy Hollow Wedding Chapel
+
+SELECT Users.F_name, Users.L_name, reviews.stars, reviews.comment, Businesses.name FROM Businesses JOIN reviews ON reviews.business_id = Businesses.id JOIN Users ON reviews.user_id = Users.id;
+
+Bradford|Pitt|3|ok place|Grundy Hollow Wedding Chapel
+Bradford|Pitt|4|better place|Amir's Towing
+Mandy|Kaling|5|best place|Grundy Hollow Wedding Chapel
+
+SELECT * FROM Businesses JOIN reviews ON reviews.business_id = Businesses.id JOIN Users ON reviews.user_id = Users.id WHERE Businesses.name = "Amir's Towing";
+2|Amir's Towing|2|4|better place|2|1|1|Bradford|Pitt
+
